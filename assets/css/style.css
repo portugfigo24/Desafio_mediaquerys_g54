@@ -10,8 +10,8 @@ body {
 
 .grid-container {
     display: grid;
-    height: 100vh;
-    grid-template-rows: 1fr 2fr 10fr 2fr 1.5fr; 
+    /* height: 100vh; */
+    grid-template-rows: 1fr 0.2fr 10fr 0.5fr 0.5fr; 
     grid-template-areas: "header" "filter" "main" "paginador" "footer";
 }
 
@@ -68,6 +68,8 @@ body {
 
 .main {
     grid-area: main;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -99,8 +101,8 @@ body {
 
 .titulo-filter {
     font-family: 'Roboto';
-    font-size: 12px;
-    margin-bottom: 6px;
+    font-size: 90%;
+    margin: 1%;
 }
 
 .filter {
@@ -127,7 +129,7 @@ body {
 .valor-filter {
     display: flex;
     font-family: 'Roboto';
-    font-size: 16px;
+    font-size: 75%;
     justify-content: flex-start;
     align-items: center;
     margin-left: 6px;
@@ -147,10 +149,11 @@ body {
 .tarjeta-producto {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     border: 1px solid lightgray;
-    border-radius: 3px;
-    margin: 15px;
+    border-radius: 5px;
+    margin: 0.5%;
     height: 47%;
 }
 
@@ -173,9 +176,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     font-family: 'Roboto';
     font-size: 14px;
-    height: 7%;
+
+    margin:5%;
 
 }
 
@@ -185,12 +190,13 @@ body {
     align-items: center;
     font-family: 'Roboto';
     font-size: 14px;
-    height: 12%;
+    height: 20%;
     width: 40%;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: dodgerblue;
     color: white;
+    margin-bottom: 2.5%;
 }
 
 .paginador {
@@ -218,15 +224,16 @@ body {
 }
 
 
-@media (min-width:992px) {
+@media (min-width:576px) {
     .grid-container {
         grid-template-areas:
         "header header" 
         "filter main"
         "filter paginador"
         "footer footer";
-        grid-template-rows: 0.2fr 10fr 1.5fr 1fr; 
-        grid-template-columns: 1fr 4fr; 
+        grid-template-rows: 0.2fr 5fr 1.5fr 1fr; 
+        grid-template-columns: 0.5fr 4fr; 
+        height: 100vh;
     }
 
     .main {
@@ -258,7 +265,7 @@ body {
     }
 
     .valor-filter {
-        font-size:14px ;
+        font-size:70% ;
     }
 
     .filter {
@@ -268,7 +275,7 @@ body {
 
     .titulo-filter {
         margin-top:10px;
-        font-size: 16px;
+        font-size: 80%;
     }
 
     .tarjeta-producto {
@@ -277,6 +284,7 @@ body {
 
     #prod_1 {
         width: 70%;
+
     }
 
     #icono_face {
@@ -294,22 +302,23 @@ body {
 
     .titulo-producto {
         font-size: 16px;
-        height: 7%;
+ 
     
     }
     
     .boton-ver {
         
-        font-size: 16px;
+        font-size: 80%;
         height: 7%;
         border-radius: 12px;
+    
         
     }
 
     .pager {
         display: flex;
         justify-content: center;
-        height: 50%;
+        height: 30%;
         width: 50%;
         margin-top: 10px;
     }
@@ -333,7 +342,8 @@ body {
         font-family: 'Roboto';
         margin: 5px;
         font-size: 14px;
-        width: 75%;
+        width: 95%;
         color: gray;
+
     }
 }
