@@ -11,7 +11,7 @@ body {
 .grid-container {
     display: grid;
     /* height: 100vh; */
-    grid-template-rows: 1fr 0.2fr 10fr 0.5fr 0.5fr; 
+    grid-template-rows: 1fr 0.2fr 10fr 0.5fr 0.3fr; 
     grid-template-areas: "header" "filter" "main" "paginador" "footer";
 }
 
@@ -231,7 +231,7 @@ body {
         "filter main"
         "filter paginador"
         "footer footer";
-        grid-template-rows: 0.2fr 5fr 1.5fr 1fr; 
+        grid-template-rows: 0.2fr 5fr 1.5fr 0.5fr; 
         grid-template-columns: 0.5fr 4fr; 
         height: 100vh;
     }
